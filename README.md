@@ -31,6 +31,7 @@ Uses live exchange rates from the Frankfurter API
 Bonus: Historical Exchange Rate Chart
 
 The chart shows rate trends over the last 30 days for USD against EUR.
+The idea is for the user to know the latests trends of the currency they want to send so they know the best time to do it.
 
 Since I am fairly new to Next.js, I wasn't able to implement changing base and target currencies, but that was the initial idea.
 
@@ -68,6 +69,8 @@ Inspiration:
 
 The visual concept, particularly the modern CSS approach and lighting effects, was inspired by the JavaScript Mastery channel. You can check the reference video here(https://www.youtube.com/watch?v=I1V9YWqRIeI).
 
+FUTURE: 
+I think the most important feats that should be added in the future are error display and the functionality of the charts (my initial idea)
 Usage
 1. Install dependencies
 Bash
