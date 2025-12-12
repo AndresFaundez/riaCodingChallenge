@@ -28,3 +28,12 @@ export async function getCurrencies(){
     return res.json();
 }
 
+export async function getHistoricalRates(from: string, to: string, start: string, end: string) {
+  const res = await fetch(`${API_URL}/${start}..${end}?from=${from}&to=${to}`);
+  if (!res.ok) {
+    throw new Error("Error while getting historicalRates");
+  }
+  const data = await res.json();
+  return data.rates; 
+}
+
