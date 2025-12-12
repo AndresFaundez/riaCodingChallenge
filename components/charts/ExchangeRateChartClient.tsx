@@ -42,7 +42,7 @@ const ExchangeRateChartClient = ({ from, to, series }: Props) => {
     },
     yAxis: {
       title: {
-        text: null,
+        text: undefined,
       },
       gridLineColor: "rgba(255, 255, 255, 0.05)",
       labels: {
