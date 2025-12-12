@@ -1,29 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import  getExchangeRate  from "@/lib/frankfurter";
+import  {getExchangeRate}  from "@/lib/frankfurter";
 
 interface Props {
   currencies: Record<string, string>;
   initialRates: Record<string, number>;
+  initialBase: string;
+  symbols: string[];
 }
 
 
-const ExchangeOverviewClient = ({ currencies, initialRates }: Props) => {
-  const [base, setBase] = useState("USD");
+const ExchangeOverviewClient = ({ currencies, initialRates, initialBase, symbols }: Props) => {
+  const [base, setBase] = useState(initialBase);
   const [rates, setRates] = useState(initialRates);
   const [loading, setLoading] = useState(false); //Strictly for UI 
-
-  const biggestCurrencies = [
-    "EUR", "GBP", "JPY", "AUD", "CAD",
-    "CHF", "CNY", "SEK", "NZD", "MXN",
-  ];
   const mainRate = rates["EUR"];
 
   useEffect(()=>{
     async function load(){
       setLoading(true)      //the idea behind using loading is for better ui
-      const newRates = await getExchangeRate(base, biggestCurrencies);
+      const newRates = await getExchangeRate(base, symbols);
       setRates(newRates);
       setLoading(false);
     }
