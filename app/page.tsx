@@ -1,5 +1,6 @@
 import ExchangeOverview from "@/components/overview/ExchangeOverview"
 import Converter from "@/components/converter/Converter"
+import ExchangeRateChart from "@/components/charts/ExchangeRateChart"
 const Page = () => {
   return (
     <section>
@@ -7,6 +8,7 @@ const Page = () => {
       <p className = "text-center mt-5">USD, EUR, and Many More, All in One Place</p>
       <ExchangeOverview />
       <Converter />
+      <ExchangeRateChart/>
     </section>
   )
 }

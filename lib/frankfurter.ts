@@ -1,4 +1,4 @@
-const API_URL = 'https://api.frankfurter.app';
+const API_URL = "https://api.frankfurter.dev/v1";
 
 
 //Define type frankfurtResponse so ts doesnt throw errors
