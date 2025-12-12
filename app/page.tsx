@@ -8,9 +8,9 @@ const Page = () => {
       <p className = "text-center mt-5">USD, EUR, and Many More, All in One Place</p>
       <ExchangeOverview />
       <Converter />
-      <ExchangeRateChart/>
+      <ExchangeRateChart />
     </section>
   )
 }
 
-export default Page
+export default Page;
